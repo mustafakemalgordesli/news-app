@@ -22,7 +22,13 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar/>
         {children}
+
+
+        <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js"></script
         <Footer/>
+
+        
+        <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js"></script>
       </body>
     </html>
   )

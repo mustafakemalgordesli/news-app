@@ -1,14 +1,20 @@
 "use client"
+import BlogList from "@/components/BlogList"
+import BlogCard from "@/components/BlogCard"
+import ToolSection from "@/components/ToolSection"
 import Currency from "@/components/Currency";
 import HeroBanner from "@/components/HeroBanner";
 import Slide from "@/components/Slide";
-import { Dropdown } from "flowbite-react";
 
 export default function Home() {
   return (
-    <main className="">
+
+    <main className="max-w-screen-xl mx-auto">
       <HeroBanner/>
+      <ToolSection />
       <Slide/>
-    </main>
-  )
+      <BlogList />
+    )
 }
+
+
