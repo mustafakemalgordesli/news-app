@@ -1,7 +1,9 @@
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Header from "@/components/Header"
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,9 +20,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
+        <Navbar/>
         {children}
 
+
+        <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js"></script
+        <Footer/>
+
+        
         <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js"></script>
       </body>
     </html>
