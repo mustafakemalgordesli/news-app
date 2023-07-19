@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
-import {BsChevronCompactLeft, BsChevronCompactRight} from 'react-icons/bs'
+import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs'
 
 const HeroBanner = () => {
 
@@ -36,17 +36,17 @@ const HeroBanner = () => {
 
   return (
     <div className='max-w-screen-xl mx-auto w-full py-16 px-4 relative h-[780px] group'>
-      <div style={{backgroundImage: `url(${slides[currentIndex].url})`}} className='w-full h-full rounded-xl bg-center ng-cover duration-500'>
+      <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className='w-full h-full rounded-xl bg-center ng-cover duration-500'>
         <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-          <BsChevronCompactLeft 
-          size={30}
-          onClick={prevSlide}
+          <BsChevronCompactLeft
+            size={30}
+            onClick={prevSlide}
           />
         </div>
         <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-          <BsChevronCompactRight 
-          size={30}
-          onClick={nextSlide}
+          <BsChevronCompactRight
+            size={30}
+            onClick={nextSlide}
           />
         </div>
       </div>
