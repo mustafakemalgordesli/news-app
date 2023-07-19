@@ -3,6 +3,7 @@ import Footer from '@/components/Footer'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -20,15 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar/>
+        <Navbar />
         {children}
 
+        <Footer />
 
-        <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js"></script
-        <Footer/>
 
-        
-        <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js"></script>
+        <Script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js"></Script>
       </body>
     </html>
   )
