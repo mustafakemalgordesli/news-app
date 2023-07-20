@@ -3,8 +3,9 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-gray-900">
-      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+    <footer className="bg-white dark:bg-gray-900 mt-auto">
+      <hr className="border-gray-200 sm:mx-auto dark:border-gray-700" />
+      <div className="mx-auto w-full max-w-screen-xl p-4">
         {/* <div className="md:flex md:justify-between">
               <div className="mb-6 md:mb-0">
                   <a href="https://flowbite.com/" className="flex items-center">
@@ -60,8 +61,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-      <div className="sm:flex sm:items-center sm:justify-between">
+      <hr className="border-gray-200 sm:mx-auto dark:border-gray-700" />
+      <div className="sm:flex sm:items-center sm:justify-between p-4 max-w-screen-xl mx-auto md:py-6">
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">Webewer ©<a href="https://www.webewer.com/" className="hover:underline"></a> Tüm Hakları Saklıdır.
         </span>
         <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
@@ -91,7 +92,6 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      {/* </div> */}
     </footer>
   )
 }
