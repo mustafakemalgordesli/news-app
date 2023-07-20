@@ -23,7 +23,7 @@ export default function RootLayout({
         <Footer />
 
 
-        <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js" async />
+        <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js" defer />
       </body>
     </html>
   )
