@@ -13,28 +13,14 @@ export default function CreateBlogForm({ token }: { token: string }) {
 
         const formData = new FormData(event.target);
 
-        // console.log("deneme")
-
         console.log(formData.get("image"))
         console.log(formData.get("category_slug"))
-
-        // const res = await fetch("/api/blog/create",
-        //     {
-        //         method: "POST",
-        //         body: formData,
-        //         headers: {
-        //             'Authorization': `Bearer ${token}`,
-        //             'Content-Type': 'multipart/form-data'
-        //         },
-        //     });
 
         const res = await axios.post(`/api/blog/create`, formData, {
             headers: {
                 'Authorization': `Bearer ${token}`,
             }
         })
-
-        // const { success } = await res.json()
 
         const { success } = res.data
 

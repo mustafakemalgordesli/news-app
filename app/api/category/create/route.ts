@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import axios from "axios";
 
 export async function POST(request: any) {
-  const url = `${process.env.NEXT_PUBLIC_API_URL}/post/create`;
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/category/create`;
 
   const token = request.headers.get("authorization");
 
@@ -15,6 +15,8 @@ export async function POST(request: any) {
   });
 
   const resData = dto.data;
+
+  console.log(resData);
 
   if (resData.success) {
     const response = NextResponse.json(
