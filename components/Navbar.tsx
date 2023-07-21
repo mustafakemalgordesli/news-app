@@ -6,7 +6,7 @@ const Navbar = () => {
     <>
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="https://www.webewer.com/" className="flex items-center">
+          <a href="/" className="flex items-center">
             <Image
               src='/webewer.1466ce8c.png'
               width={45}

@@ -1,4 +1,4 @@
-import CreateBlogForm from '@/components/Forms/CreateBlogForm';
+import CreateCategoryForm from '@/components/Forms/CreateCategoryForm';
 import { cookies } from 'next/headers';
 
 export default function Add() {
@@ -9,5 +9,5 @@ export default function Add() {
 
     const tokenValue: string = token?.value || "";
 
-    return <CreateBlogForm token={tokenValue} />
+    return <CreateCategoryForm token={tokenValue} />
 }
