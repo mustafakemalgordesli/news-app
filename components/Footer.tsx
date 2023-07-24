@@ -5,63 +5,6 @@ const Footer = () => {
   return (
     <footer className="bg-white dark:bg-gray-900 mt-auto">
       <hr className="border-gray-200 sm:mx-auto dark:border-gray-700" />
-      <div className="mx-auto w-full max-w-screen-xl p-4">
-        {/* <div className="md:flex md:justify-between">
-              <div className="mb-6 md:mb-0">
-                  <a href="https://flowbite.com/" className="flex items-center">
-                      <Image
-                      width={45}
-                      height={45}
-                      src='/webewer.1466ce8c.png'
-                      className="h-8 mr-3" alt="Logo" />
-                      <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Webewer</span>
-                  </a>
-              </div> */}
-        <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-          <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Hakkımızda</h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
-              <li className="mb-4">
-                <p>
-                  WebEwer, farklı kaynaklardan verileri toplayarak, analiz etmek ve kısa, bilgilendirici makaleleler üretmek için AI teknolojisini kullanır. Ayrıca WebEwer, web&apos;i taramak ve en ilgili hikayeleri belirlemek için AI destekli haber derleme ve toplama araçlarını kullanır.
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Adres</h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
-              <li className="mb-4">
-                <p>
-                  Huzur Mah. Azerbaycan Cad. No:4, 34415 Skyland Rezidans,
-                  Sarıyer / İstanbul
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Bize Ulaşın</h2>
-
-            <form>
-              <div className="mb-6">
-                <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">E-mail</label>
-                <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="email" required />
-              </div>
-              <div className="mb-6">
-                <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Konu</label>
-                <input type="password" id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-              </div>
-              <div className="mb-6">
-                <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mesaj</label>
-                <input type="password" id="password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
-              </div>
-              <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Gönder</button>
-            </form>
-
-          </div>
-        </div>
-      </div>
-      <hr className="border-gray-200 sm:mx-auto dark:border-gray-700" />
       <div className="sm:flex sm:items-center sm:justify-between p-4 max-w-screen-xl mx-auto md:py-6">
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">Webewer ©<a href="https://www.webewer.com/" className="hover:underline"></a> Tüm Hakları Saklıdır.
         </span>
@@ -92,7 +35,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-    </footer>
+    </footer >
   )
 }
 
