@@ -2,9 +2,13 @@
 import React, { useState } from "react"
 import { Button, Modal } from 'flowbite-react';
 
-export default function DeleteModal() {
+export default function DeleteModal({ onClick }: { onClick: any }) {
     const [openModal, setOpenModal] = useState<string | undefined>();
     const props = { openModal, setOpenModal };
+
+    const onDelete = () => {
+        onClick()
+    }
 
     return (
         <>

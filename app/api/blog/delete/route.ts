@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import axios from "axios";
 
-export async function POST(request: Request) {
-  const url = `${process.env.NEXT_PUBLIC_API_URL}/post/create`;
+export async function DELETE(request: Request) {
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/post/delete`;
 
   const token = request.headers.get("authorization");
 
@@ -24,5 +24,6 @@ export async function POST(request: Request) {
 
     return response;
   }
+
   return NextResponse.json({ success: false });
 }
