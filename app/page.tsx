@@ -11,7 +11,7 @@ export default function Home({ params, searchParams }: { params: any, searchPara
       <HeroBanner />
       <ToolSection />
       <Slide />
-      <BlogList page={Number(searchParams.page) || 1} />
+      {/* <BlogList page={Number(searchParams.page) || 1} /> */}
     </main>
   )
 }
