@@ -3,14 +3,15 @@ import ToolSection from "@/components/ToolSection"
 import HeroBanner from "@/components/HeroBanner";
 import Slide from "@/components/Slide";
 
-export default function Home() {
+export default function Home({ params, searchParams }: { params: any, searchParams: any }) {
+
   return (
 
     <main className="max-w-screen-xl mx-auto">
       <HeroBanner />
       <ToolSection />
       <Slide />
-      <BlogList />
+      <BlogList page={Number(searchParams.page) || 1} />
     </main>
   )
 }
