@@ -8,7 +8,8 @@ export default function DeleteModal() {
 
     return (
         <>
-            <Button onClick={() => props.setOpenModal('pop-up')} className="inline-block border border-cornflower bg-transparent text-cornflower hover:text-white hover:bg-red-900">Delete</Button>
+            {/* <Button onClick={() => props.setOpenModal('pop-up')} color="failure" className="inline-block border border-red-700 bg-white text-red-700 hover:text-white hover:bg-red-700 outline-red-700">Delete</Button> */}
+            <button onClick={() => props.setOpenModal('pop-up')} type="button" className="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm mx-2 px-5 py-2 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">Red</button>
             <Modal show={props.openModal === 'pop-up'} size="md" popup onClose={() => props.setOpenModal(undefined)}>
                 <Modal.Header />
                 <Modal.Body>

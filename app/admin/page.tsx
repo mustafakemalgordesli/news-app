@@ -25,6 +25,8 @@ async function getData(token: string, page: any = 1) {
         throw new Error('Failed to fetch data')
     }
 
+    console.log(data)
+
     return data.posts
 }
 
