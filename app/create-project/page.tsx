@@ -1,12 +1,12 @@
 import Form from '@/components/Form'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
     <div>
-      <Form/>
+      {/* <Form /> */}
     </div>
   )
 }
 
-export default page
+export default Page
