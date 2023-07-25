@@ -1,24 +1,40 @@
+"use client"
+
 import Image from 'next/image';
 import Link from 'next/link';
 import DeleteModal from '@/components/DeleteModal';
 import axios from "axios"
 import { cookies } from 'next/headers'
+import { useRouter, useSearchParams } from "next/navigation";
 
-const TableItem = ({ blog }: { blog: any }) => {
+const TableItem = ({ blog, token }: { blog: any, token: string }) => {
 
-    const cookieStore = cookies()
+    const router = useRouter();
+    const searchParams = useSearchParams();
 
-    const token = cookieStore.get('token');
+    const handleDelete = async () => {
 
-    const handleDelete = (event: any) => {
-        event.preventDefault();
-        const formData = new FormData();
-        formData.append("slug", blog.slug);
-        axios.delete("/api/blog/delete", formData, {
+        const reqData = {
+            slug: blog.slug
+        }
+
+        const res = await axios.post("/api/blog/delete", reqData, {
             headers: {
                 'Authorization': `Bearer ${token}`,
             }
         })
+
+        const { success } = res.data;
+
+        if (success) {
+            const nextUrl = searchParams.get("next");
+            // @see: https://github.com/vercel/next.js/discussions/44149
+            router.push(nextUrl ?? "/admin");
+            router.refresh();
+        } else {
+            // Make your shiny error handling with a great user experience
+            alert("Blog not deleted");
+        }
     }
 
     return <tr className="border-b border-gray-200 dark:border-gray-700">
@@ -49,3 +65,5 @@ const TableItem = ({ blog }: { blog: any }) => {
         </td>
     </tr>
 }
+
+export default TableItem

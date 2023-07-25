@@ -7,11 +7,13 @@ export default function Home({ params, searchParams }: { params: any, searchPara
 
   return (
 
-    <main className="w-screen mx-auto">
+
+      <main className="w-screen mx-auto">
+
       <HeroBanner />
-      <ToolSection />
+      {/* <ToolSection /> */}
       <Slide />
-      <BlogList page={Number(searchParams.page) || 1} />
+      {/* <BlogList page={Number(searchParams.page) || 1} /> */}
     </main>
   )
 }
