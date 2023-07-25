@@ -29,7 +29,7 @@ export async function POST(request: any) {
     response.cookies.set({
       name: "token",
       value: token,
-      path: "/admin",
+      path: "/",
     });
 
     return response;

@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-slate-600 mt-auto">
       <hr className=" sm:mx-auto border-slate-600" />
       <div className="flex flex-col sm:flex-row items-center justify-between p-4 max-w-screen-xl mx-auto md:py-6">
-        <span className="text-sm sm:text-center text-white">Webewer ©<a href="/" className="hover:underline"></a> Tüm Hakları Saklıdır.
+        <span className="text-sm sm:text-center text-white"><a href="/" className="hover:underline">Webewer</a> © Tüm Hakları Saklıdır.
         </span>
         <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
           <a href="#" className="text-white ">

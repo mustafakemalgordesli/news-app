@@ -15,16 +15,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
+
   return (
-    <html lang="en">
-      <body className={inter.className + " flex flex-col h-screen"}>
-        <Navbar />
-        {children}
-        <Footer />
+    <>
+      <html lang="en">
+        <body className={inter.className + " flex flex-col h-screen"}>
 
-
-        <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js" defer />
-      </body>
-    </html>
+          <Navbar />
+          {children}
+          <Footer />
+          <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js" crossOrigin="anonymous" defer />
+        </body>
+      </html>
+    </>
   )
 }
