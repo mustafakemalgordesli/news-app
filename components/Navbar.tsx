@@ -62,7 +62,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <nav className="bg-gray-50 dark:bg-gray-700 mr-10">
+      <nav className="bg-gray-50 dark:bg-gray-700">
         <div className="max-w-screen-xl px-4 py-3 mx-auto">
           <div className="flex items-center overflow-hidden">
             <ul className="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">
@@ -79,7 +79,7 @@ const Navbar = () => {
                 <a href="#" className="text-gray-900 dark:text-white hover:underline">Ekonomi</a>
               </li>
               <li>
-                <a href="#" className="text-gray-900 dark:text-white hover:underline">Finanas</a>
+                <a href="#" className="text-gray-900 dark:text-white hover:underline">Finans</a>
               </li>
               <li>
                 <a href="#" className="text-gray-900 dark:text-white hover:underline">Sağlık</a>

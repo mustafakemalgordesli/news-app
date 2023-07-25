@@ -7,7 +7,7 @@ export default function Home({ params, searchParams }: { params: any, searchPara
 
   return (
 
-    <main className="max-w-screen-xl mx-auto">
+    <main className="w-screen mx-auto">
       <HeroBanner />
       <ToolSection />
       <Slide />
