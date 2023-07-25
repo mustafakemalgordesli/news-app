@@ -1,3 +1,5 @@
+// "use client"
+
 export default function NotFound() {
     return <section className="flex justify-center items-center bg-white dark:bg-gray-900 min-h-screen">
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
