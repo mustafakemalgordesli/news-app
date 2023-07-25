@@ -1,5 +1,7 @@
 import { cookies } from 'next/headers';
 import * as React from "react";
+import TableItem from "@/components/BlogTable/TableItem"
+import Pagination from '@/components/Pagination/Pagination';
 
 async function getData(token: string, page: any = 1) {
 
@@ -9,7 +11,7 @@ async function getData(token: string, page: any = 1) {
 
     const res = await fetch(process.env.NEXT_PUBLIC_API_URL + `/post/list?page=${page}&page_max=10`, {
         headers: { Authorization: `Bearer ${token}` },
-        next: { revalidate: 10 }
+        cache: "no-cache"
     })
 
     if (!res.ok) {
@@ -22,12 +24,14 @@ async function getData(token: string, page: any = 1) {
         throw new Error('Failed to fetch data')
     }
 
-    console.log(data)
-
-    return data.posts
+    return data
 }
 
-export default async function Admin() {
+export default async function Admin({ searchParams }: any) {
+
+    const page = searchParams?.page || 1
+
+    console.log(page)
 
     const cookieStore = cookies()
 
@@ -35,10 +39,9 @@ export default async function Admin() {
 
     const tokenValue: string = token?.value || ""
 
-    const posts = await getData(tokenValue)
+    const { posts, total_page } = await getData(tokenValue)
 
     return (
-
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg w-full">
             <table className="w-full text-sm text-center text-gray-500 dark:text-gray-400">
                 <thead className="text-xs text-gray-700 uppercase dark:text-gray-400">
@@ -65,11 +68,12 @@ export default async function Admin() {
                 <tbody>
                     {
                         posts.map((item: any) =>
-                            <TableItem key={item.id} blog={item} />
+                            <TableItem key={item.id} blog={item} token={tokenValue} />
                         )
                     }
                 </tbody>
             </table>
+            <Pagination route={"/admin?page="} total_page={total_page} currentPage={Number(page) || 1} />
         </div>
     )
 }

@@ -6,14 +6,16 @@ export default function DeleteModal({ onClick }: { onClick: any }) {
     const [openModal, setOpenModal] = useState<string | undefined>();
     const props = { openModal, setOpenModal };
 
-    const onDelete = () => {
-        onClick()
+    const onDelete = async (e: any) => {
+        e.preventDefault()
+        await onClick()
+        props.setOpenModal(undefined)
     }
 
     return (
         <>
             {/* <Button onClick={() => props.setOpenModal('pop-up')} color="failure" className="inline-block border border-red-700 bg-white text-red-700 hover:text-white hover:bg-red-700 outline-red-700">Delete</Button> */}
-            <button onClick={() => props.setOpenModal('pop-up')} type="button" className="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm mx-2 px-5 py-2 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">Red</button>
+            <button onClick={() => props.setOpenModal('pop-up')} type="button" className="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm mx-2 px-5 py-2 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">Delete</button>
             <Modal show={props.openModal === 'pop-up'} size="md" popup onClose={() => props.setOpenModal(undefined)}>
                 <Modal.Header />
                 <Modal.Body>
@@ -26,7 +28,7 @@ export default function DeleteModal({ onClick }: { onClick: any }) {
                             Are you sure you want to delete this item?
                         </h3>
                         <div className="flex justify-center gap-4">
-                            <Button color="failure" onClick={() => props.setOpenModal(undefined)}>
+                            <Button color="failure" onClick={onDelete}>
                                 Yes, I&apos;m sure
                             </Button>
                             <Button color="gray" onClick={() => props.setOpenModal(undefined)}>

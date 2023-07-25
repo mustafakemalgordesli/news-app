@@ -8,7 +8,7 @@ function BlogCard({ blog }: { blog: any }) {
         <Image src={process.env.NEXT_PUBLIC_IMAGE_SERVICE + blog.image} alt="Mountain" fill />
       </div>
       <div className="px-6 pt-2 pb-1">
-        <div className="font-bold text-xl mb-1">{blog.title}</div>
+        <div className="font-bold text-xl mb-1">{blog.title.length >= 15 ? blog.title.slice(0, 15) + "..." : blog.title}</div>
         <p className="text-gray-700 text-base overflow-hidden mb-1">
           {blog.content.slice(0, 30)}...
         </p>
