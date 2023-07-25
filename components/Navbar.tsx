@@ -46,7 +46,8 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <nav className="mr-10 bg-gray-100 w-full">
+
+      <nav className="bg-gray-100">
         <div className="max-w-screen-xl px-4 py-3 mx-auto">
           <div className="flex items-center overflow-hidden">
             <ul className="flex flex-row font-medium mt-0 mr-6 space-x-8 text-sm">

@@ -6,7 +6,10 @@ import Slide from "@/components/Slide";
 export default function Home({ params, searchParams }: { params: any, searchParams: any }) {
 
   return (
-    <main className="max-w-screen-xl mx-auto">
+
+
+      <main className="w-screen mx-auto">
+
       <HeroBanner />
       {/* <ToolSection /> */}
       <Slide />
