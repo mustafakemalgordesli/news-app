@@ -35,15 +35,15 @@ const HeroBanner = () => {
   }
 
   return (
-    <div className='w-full mx-auto w-full p-2 md:py-4 px-4 relative h-[600px] group'>
+    <div className='w-full mx-auto max-w-7xl p-2 md:py-4 px-4 relative h-[600px] group'>
       <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className='bg-cover w-full h-full rounded-xl bg-center ng-cover duration-500'>
-        <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+        <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer select-none'>
           <BsChevronCompactLeft
             size={30}
             onClick={prevSlide}
           />
         </div>
-        <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+        <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer select-none'>
           <BsChevronCompactRight
             size={30}
             onClick={nextSlide}

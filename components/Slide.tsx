@@ -19,11 +19,11 @@ const Slide = () => {
   // }
 
   return (
-    <div className="relative flex items-center overflow-hidden mx-auto max-w-screen-xl overflow-x-hidden p-4 mb-8">
+    <div className="relative flex items-center overflow-hidden mx-auto max-w-7xl overflow-x-hidden p-4 mb-8">
       {/* <MdChevronLeft
       className='opacity-50 cursor-pointer hover:opacity-100' 
       onClick={sliderLeft} size={40}/> */}
-      <div id='example' className='w-full h-[400px] overflow-y-hidden overflow-x-scroll whitespace-nowrap scroll-smooth'>
+      <div id='HomeSlide' className='w-full h-[400px] overflow-y-hidden overflow-x-scroll whitespace-nowrap scroll-smooth'>
         {data.map((item) => (
           // eslint-disable-next-line @next/next/no-img-element
           <div className="inline-block h-[400px] w-[340px] sm:w-1/2 md:w-1/3 lg:w-1/4" key={item.id}>
