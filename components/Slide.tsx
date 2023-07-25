@@ -22,7 +22,7 @@ const Slide = () => {
       {/* <MdChevronLeft
       className='opacity-50 cursor-pointer hover:opacity-100' 
       onClick={sliderLeft} size={40}/> */}
-      <div id='example' className='w-full h-[400px] overflow-y-hidden h-full overflow-x-scroll whitespace-nowrap scroll-smooth'>
+      <div id='HomeSlide' className='w-full h-[400px] overflow-y-hidden h-full overflow-x-scroll whitespace-nowrap scroll-smooth'>
         {data.map((item) => (
           // eslint-disable-next-line @next/next/no-img-element
           <div className="inline-block h-[400px] w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
