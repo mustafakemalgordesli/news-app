@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <footer className="bg-slate-600 mt-auto">
       <hr className=" sm:mx-auto border-slate-600" />
-      <div className="sm:flex sm:items-center sm:justify-between p-4 max-w-screen-xl mx-auto md:py-6">
-        <span className="text-sm sm:text-center text-white">Webewer ©<a href="https://www.webewer.com/" className="hover:underline"></a> Tüm Hakları Saklıdır.
+      <div className="flex flex-col sm:flex-row items-center justify-between p-4 max-w-screen-xl mx-auto md:py-6">
+        <span className="text-sm sm:text-center text-white">Webewer ©<a href="/" className="hover:underline"></a> Tüm Hakları Saklıdır.
         </span>
         <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
           <a href="#" className="text-white ">

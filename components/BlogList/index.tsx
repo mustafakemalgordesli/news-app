@@ -28,7 +28,7 @@ export default async function BlogList({ page }: { page: number }) {
 
 
     return <>
-        <div className="m-5 p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5  max-w-7xl mx-auto justify-evenly my-5 content-center">
+        <div className="mb-0 p-5 pb-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5  max-w-7xl mx-auto justify-evenly content-center">
             {
                 posts.map((blog: any) => <BlogCard blog={blog} key={blog.id} />)
             }
