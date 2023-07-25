@@ -1,4 +1,5 @@
 import BlogCard from "../BlogCard"
+import Pagination from "../Pagination/Pagination";
 
 const getData = async (page: number) => {
     const url = `${process.env.NEXT_PUBLIC_API_URL}/post/list?page=${page}&page_max=8`;
@@ -18,23 +19,21 @@ const getData = async (page: number) => {
         throw new Error('Failed to fetch data')
     }
 
-    return data.posts
+    return data
 }
 
 export default async function BlogList({ page }: { page: number }) {
 
-    console.log(page)
+    const { posts, total_page } = await getData(page)
 
-    const posts = await getData(page)
 
-    console.log(posts.length)
-
-    return <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 justify-evenly my-5">
-
-        {
-            posts.map((blog: any) => <BlogCard blog={blog} key={blog.id} />)
-        }
-
-    </div>
+    return <>
+        <div className="m-5 p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5  max-w-7xl mx-auto justify-evenly my-5 content-center">
+            {
+                posts.map((blog: any) => <BlogCard blog={blog} key={blog.id} />)
+            }
+        </div>
+        <Pagination currentPage={page} total_page={total_page} route="?page=" />
+    </>
 
 }

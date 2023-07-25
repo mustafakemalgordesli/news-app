@@ -1,14 +1,17 @@
 import { NextResponse } from "next/server";
 import axios from "axios";
 
-export async function DELETE(request: Request) {
+export async function POST(request: any) {
   const url = `${process.env.NEXT_PUBLIC_API_URL}/post/delete`;
 
   const token = request.headers.get("authorization");
 
-  const formData = await request.formData();
+  const body = await request.json();
 
-  const dto = await axios.post(url, formData, {
+  var bodyFormData = new FormData();
+  bodyFormData.append("slug", body.slug);
+
+  const dto = await axios.post(url, bodyFormData, {
     headers: {
       Authorization: token,
     },

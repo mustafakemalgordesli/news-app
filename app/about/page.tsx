@@ -3,7 +3,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>
+    <div className='m-10'>
       <div>
         <Image
           src='/image-1.jpg'
@@ -14,7 +14,7 @@ const page = () => {
         />
       </div> 
       <div className='flex-row flex max-w-screen-lg mx-auto w-full gap-10'>
-        <div className='max-w-screen-lg mx-auto w-full flex flex-col flex-1 mt-50 gap-8'>
+        <div className=' flex flex-col flex-1 mt-50 gap-8'>
           <h1 className='text-lg font-bold pt-10'>Biz Kimiz?</h1>
           <p className='text-lg font-normal text-justify'>
             WebEwer, farklı kaynaklardan verileri toplayarak, analiz etmek ve kısa, bilgilendirici makaleleler üretmek için AI teknolojisini kullanır. Ayrıca WebEwer, web&apos;i taramak ve en ilgili hikayeleri belirlemek için AI destekli haber derleme ve toplama araçlarını kullanır.

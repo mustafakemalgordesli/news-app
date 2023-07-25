@@ -18,18 +18,20 @@ const Slide = () => {
   // }
 
   return (
-    <div className="relative flex items-center overflow-hidden mx-auto max-w-screen-xl overflow-x-hidden p-4 mb-8">
+    <div className="relative flex items-center overflow-hidden mx-auto max-w-7xl overflow-x-hidden p-4 mb-8">
       {/* <MdChevronLeft
       className='opacity-50 cursor-pointer hover:opacity-100' 
       onClick={sliderLeft} size={40}/> */}
-      <div id='example' className='w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth'>
+      <div id='example' className='w-full h-[400px] overflow-y-hidden h-full overflow-x-scroll whitespace-nowrap scroll-smooth'>
         {data.map((item) => (
           // eslint-disable-next-line @next/next/no-img-element
-          <img
-            className='w-[340px] h-[400px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300 rounded-xl'
-            key={item.id}
-            src={item.image} alt='/'
-          />
+          <div className="inline-block h-[400px] w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+            <img
+              className='h-full object-cover inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300 rounded-xl'
+              key={item.id}
+              src={item.image} alt='/'
+            />
+          </div>
         ))}
       </div>
       {/* <MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100' onClick={sliderRight} size={40}/> */}
