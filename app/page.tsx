@@ -1,19 +1,12 @@
-import BlogList from "@/components/BlogList"
-import ToolSection from "@/components/ToolSection"
-import HeroBanner from "@/components/HeroBanner";
-import Slide from "@/components/Slide";
+import HomeContainer from "@/containers/HomeContainer"
 
 export default function Home({ params, searchParams }: { params: any, searchParams: any }) {
 
+  console.log(params)
+
   return (
-
-
-      <main className="w-screen mx-auto">
-
-      <HeroBanner />
-      {/* <ToolSection /> */}
-      <Slide />
-      <BlogList page={Number(searchParams.page) || 1} />
+    <main className="w-screen mx-auto">
+      <HomeContainer page={Number(searchParams.page) || 1} />
     </main>
   )
 }

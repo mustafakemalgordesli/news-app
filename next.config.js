@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    experimental: {
+        nextScriptWorkers: true,
+    },
     images: {
         domains: ["127.0.0.1"],
         // remotePatterns: [
@@ -17,6 +20,8 @@ const nextConfig = {
         //     },
         // ],
     },
+    reactStrictMode: true,
+    swcMinify: true,
 }
 
 module.exports = nextConfig
