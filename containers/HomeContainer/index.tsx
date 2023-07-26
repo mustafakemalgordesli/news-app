@@ -8,13 +8,13 @@ interface ContainerProps {
     category?: string;
 }
 
-export default function HomeContainer({ page, category }: ContainerProps) {
+export default function HomeContainer({ page }: ContainerProps) {
     return (
         <>
             <HeroBanner />
             {/* <ToolSection /> */}
             <Slide />
-            <BlogList page={page} category={category || ""} />
+            <BlogList page={page} />
         </>
     )
 }

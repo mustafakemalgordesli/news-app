@@ -4,7 +4,9 @@ export default function Pagination({ total_page, currentPage, route }: { total_p
 
     const inactive = "relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
 
-    return <div className="flex items-center justify-between bg-white px-4 py-3 sm:px-6 my-5">
+    if (total_page <= 1) return <></>
+
+    return <div className="flex items-center justify-between bg-white px-4 sm:px-6 mb-5">
         <div className="flex flex-1 items-center justify-between">
             <div className="mx-auto">
                 <nav className="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
