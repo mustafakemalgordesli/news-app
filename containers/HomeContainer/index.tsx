@@ -8,10 +8,40 @@ interface ContainerProps {
     category?: string;
 }
 
-export default function HomeContainer({ page }: ContainerProps) {
+const getData = async () => {
+
+    const url = `${process.env.NEXT_PUBLIC_API_URL}/post/list?page=1&page_max=4&order_days=7`;
+
+    const res = await fetch(url, {
+        next: { revalidate: 10 }
+        // cache: "no-cache"
+    })
+
+    if (!res.ok) {
+        return null
+    }
+
+    const data = await res.json()
+
+    if (data.status === 401) {
+        return null
+    }
+
+    if (!data.success) {
+        return null
+    }
+
+    return data
+}
+
+export default async function HomeContainer({ page }: ContainerProps) {
+
+    const bannerData = await getData();
     return (
         <>
-            <HeroBanner />
+            {
+                bannerData && <HeroBanner slides={bannerData} />
+            }
             {/* <ToolSection /> */}
             <Slide />
             <BlogList page={page} />

@@ -3,22 +3,22 @@
 import React, { useState } from 'react'
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs'
 
-const HeroBanner = () => {
+const HeroBanner = ({ slides }: { slides: any }) => {
 
-  const slides = [
-    {
-      url: '/1.jpg'
-    },
-    {
-      url: '/2.jpg'
-    },
-    {
-      url: '/1.jpg'
-    },
-    {
-      url: '/3.jpg'
-    }
-  ]
+  // const slides = [
+  //   {
+  //     url: '/1.jpg'
+  //   },
+  //   {
+  //     url: '/2.jpg'
+  //   },
+  //   {
+  //     url: '/1.jpg'
+  //   },
+  //   {
+  //     url: '/3.jpg'
+  //   }
+  // ]
 
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -36,7 +36,7 @@ const HeroBanner = () => {
 
   return (
     <div className='w-full mx-auto max-w-7xl p-2 px-4 relative aspect-16/7 mb-5 group'>
-      <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className='bg-cover w-full h-full rounded-xl bg-center ng-cover duration-500'>
+      <div style={{ backgroundImage: `url(${slides[currentIndex]?.image})` }} className='bg-cover w-full h-full rounded-xl bg-center ng-cover duration-500'>
         <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer select-none'>
           <BsChevronCompactLeft
             size={30}
