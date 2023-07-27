@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const SinglePost = ({ item }: any) => {
   return (
-    <div className='flex-col flex max-w-screen-lg mx-auto w-full gap-10 mb-10'>
+    <div className='flex-col flex max-w-screen-lg mx-auto w-full mb-5'>
       <div className='mx-10 flex flex-col flex-1 mt-50 gap-8 '>
         <div className='' >
 
