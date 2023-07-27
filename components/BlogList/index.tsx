@@ -1,5 +1,5 @@
 import BlogCard from "../BlogCard"
-import Pagination from "../Pagination/Pagination";
+import Pagination from "../Pagination";
 import { redirect } from 'next/navigation';
 
 const getData = async (page: number, category: string) => {

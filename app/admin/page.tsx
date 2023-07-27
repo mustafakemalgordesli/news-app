@@ -1,7 +1,7 @@
 import { cookies } from 'next/headers';
 import * as React from "react";
 import TableItem from "@/components/BlogTable/TableItem"
-import Pagination from '@/components/Pagination/Pagination';
+import Pagination from '@/components/Pagination';
 
 async function getData(token: string, page: any = 1) {
 

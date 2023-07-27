@@ -18,8 +18,6 @@ const Slide = ({ data }: { data: any }) => {
   //   slider.scrollLeft = slider.scrollLeft ? slider.scrollLeft + 500
   // }
 
-  console.log(data)
-
   return (
     <div className="relative flex items-center overflow-hidden mx-auto max-w-7xl overflow-x-hidden p-4 pb-0">
       {/* <MdChevronLeft
