@@ -13,9 +13,6 @@ export default function CreateBlogForm({ token, categories }: { token: string, c
 
         const formData = new FormData(event.target);
 
-        console.log(formData.get("image"))
-        console.log(formData.get("category_slug"))
-
         const res = await axios.post(`/api/blog/create`, formData, {
             headers: {
                 'Authorization': `Bearer ${token}`,

@@ -31,7 +31,7 @@ const getData = async () => {
         return null
     }
 
-    return data
+    return data.posts
 }
 
 export default async function HomeContainer({ page }: ContainerProps) {

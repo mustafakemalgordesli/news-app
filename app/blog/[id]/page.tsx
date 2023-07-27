@@ -9,7 +9,7 @@ import CommentList from '@/components/CommentList'
 const getData = async (id: string) => {
 
   const url = `${process.env.NEXT_PUBLIC_API_URL}/post/detail?id=${id}`
-  console.log(url)
+
   const res = await axios.get(url)
   if (res.data.success) return res.data.data
   return null

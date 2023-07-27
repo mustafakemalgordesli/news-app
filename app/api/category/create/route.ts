@@ -16,8 +16,6 @@ export async function POST(request: any) {
 
   const resData = dto.data;
 
-  console.log(resData);
-
   if (resData.success) {
     const response = NextResponse.json(
       { success: true },

@@ -31,8 +31,6 @@ export default async function Admin({ searchParams }: any) {
 
     const page = searchParams?.page || 1
 
-    console.log(page)
-
     const cookieStore = cookies()
 
     const token = cookieStore.get('token')

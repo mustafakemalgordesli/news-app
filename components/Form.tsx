@@ -33,7 +33,6 @@ const Form = () => {
                     onChange={(event, editor) => {
                         const data = editor.getData();
                         SetData(data)
-                        console.log(data)
                     }}
                 // onBlur={(event, editor) => {
                 //     console.log('Blur.', editor);
