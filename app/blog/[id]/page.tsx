@@ -3,12 +3,13 @@ import Comment from '@/components/CommentForm'
 import SinglePost from '@/components/SinglePost'
 import { notFound } from 'next/navigation'
 import axios from 'axios'
+import CommentList from '@/components/CommentList'
 
 
 const getData = async (id: string) => {
 
   const url = `${process.env.NEXT_PUBLIC_API_URL}/post/detail?id=${id}`
-  console.log(url)
+
   const res = await axios.get(url)
   if (res.data.success) return res.data.data
   return null
@@ -29,7 +30,8 @@ export default async function BlogDetailPage({ params }: any) {
         data ?
           <div>
             <SinglePost item={data} />
-            <Comment />
+            <Comment post_id={data.id} />
+            <CommentList post_id={data.id} />
           </div >
           : <section className="flex justify-center items-center bg-white dark:bg-gray-900 min-h-screen">
             <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">

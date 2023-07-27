@@ -1,18 +1,12 @@
 import { NextResponse } from "next/server";
 import axios from "axios";
 
-export async function POST(request: any) {
-  const url = `${process.env.NEXT_PUBLIC_API_URL}/category/create`;
-
-  const token = request.headers.get("authorization");
+export async function POST(request: Request) {
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/comment/create`;
 
   const formData = await request.formData();
 
-  const dto = await axios.post(url, formData, {
-    headers: {
-      Authorization: token,
-    },
-  });
+  const dto = await axios.post(url, formData);
 
   const resData = dto.data;
 
