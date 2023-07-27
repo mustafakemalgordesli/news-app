@@ -2,22 +2,11 @@
 
 import React, { useState } from 'react'
 // import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs'
-import { data } from '@/lib/mockData'
+import { data } from '@/lib/data'
 import Image from 'next/image'
 // import { MdChevronLeft, MdChevronRight } from 'react-icons/md'
 
 const Slide = () => {
-
-  // const sliderLeft = () => {
-  //   const slider = document.getElementById('slider')
-  //   slider.scrollLeft = slider.scrollLeft - 500;
-  // }
-
-  // const sliderRight = () => {
-  //   const slider = document.getElementById('slider')
-  //   slider.scrollLeft = slider.scrollLeft ? slider.scrollLeft + 500
-  // }
-
   return (
     <div className="relative flex items-center overflow-hidden mx-auto max-w-7xl overflow-x-hidden p-4 pb-0">
       {/* <MdChevronLeft

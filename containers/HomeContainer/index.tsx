@@ -14,7 +14,7 @@ export default function HomeContainer({ page }: ContainerProps) {
             <HeroBanner />
             {/* <ToolSection /> */}
             <Slide />
-            <BlogList page={page} />
+            {/* <BlogList page={page} /> */}
         </>
     )
 }
