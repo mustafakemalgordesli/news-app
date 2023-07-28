@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import DeleteModal from '@/components/DeleteModal';
 import axios from "axios"
-import { cookies } from 'next/headers'
 import { useRouter, useSearchParams } from "next/navigation";
 
 const TableItem = ({ blog, token }: { blog: any, token: string }) => {

@@ -3,7 +3,7 @@ import React from 'react'
 
 const getData = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/category/list`, {
-    next: { revalidate: 100, },
+    next: { revalidate: 10, },
   })
 
   const data = await res.json()
