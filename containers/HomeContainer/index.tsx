@@ -69,8 +69,6 @@ export default async function HomeContainer({ page }: ContainerProps) {
 
     const [bannerData, slideData] = await Promise.all([data1, data2])
 
-    console.log(bannerData)
-
     return (
         <>
             {
