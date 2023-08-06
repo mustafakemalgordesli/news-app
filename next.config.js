@@ -5,7 +5,7 @@ const nextConfig = {
         serverActions: true,
     },
     images: {
-        domains: ["127.0.0.1"],
+        domains: [process.env.NEXT_PUBLIC_IMAGE_SERVICE_HOST],
         // remotePatterns: [
         //     // {
         //     //     protocol: process.env.NEXT_PUBLIC_IMAGE_SERVICE_PROTOCOL,
