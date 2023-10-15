@@ -18,6 +18,17 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Env Example
+
+```bash
+NEXT_PUBLIC_JWT_SECRET_KEY="SECRET123"
+NEXT_PUBLIC_API_URL="http://127.0.0.1:8000/api"
+NEXT_PUBLIC_IMAGE_SERVICE_HOST="127.0.0.1"
+NEXT_PUBLIC_IMAGE_SERVICE_PORT="8000"
+NEXT_PUBLIC_IMAGE_SERVICE_PROTOCOL="http"
+NEXT_PUBLIC_IMAGE_SERVICE="http://127.0.0.1:8000"
+```
+
 ## License
 
 MIT License
